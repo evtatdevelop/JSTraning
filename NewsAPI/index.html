@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+    <title>News API</title>
+    <link rel="stylesheet" href="./css/rest.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div>
+        <h1>News API</h1>
+      </div>     
+    </header>
+    
+    <section class="app">
+      <form name="controlForm" class='controlForm'>
+        <h2 class="controlForm__header">Search news</h2>
+        <div>
+          <label for="country" class="visually-hidden">Country</label>
+          <select name="country" id="country" class="controlForm__country">
+            <option value="ru">Russia</option>
+            <option value="us">USA</option>
+          </select>       
+        </div>
+        <div>
+          <label for="body" class="visually-hidden">Description</label>
+          <input type="search" name="search" id="search" placeholder="Search" value="" class="controlForm__searh">
+        </div>
+        <button type="submit" class="button btn-success controlForm__submit">Search</button>
+      </form>
+
+      <div class="newsList">
+        <h2 class="visually-hidden">Your news</h2>
+        <ul class="colectionNews"></ul>
+      </div>
+    </section>
+
+
+    <script src="./js/app.js"></script>
+  </body>
+</html>

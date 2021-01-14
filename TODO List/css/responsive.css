@@ -1,0 +1,40 @@
+/* Tablet portrait */
+@media screen and (min-width: 704px) {
+  .header div {
+    flex-grow: 0;
+    width: 650px;
+    padding: 0;
+  }
+
+  .add__form {
+    width: 650px;
+  }
+
+  .list_items li {
+    width: 650px;
+  }
+}
+
+/* Tablet landscape */
+@media screen and (min-width: 944px) {
+}
+
+/* Desktop */
+@media screen and (min-width: 1309px) {
+  .header div {
+    flex-grow: 0;
+    width: 1200px;
+    padding: 0;
+  }
+
+  .list_items {
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .list_items li {
+    width: 590px;
+  }
+}

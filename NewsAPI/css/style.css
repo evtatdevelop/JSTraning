@@ -1,0 +1,112 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); */
+
+:root {
+  /* Colours */
+  --bg-head: royalblue;
+  --bg-light: #b2c5ff;
+}
+
+html,
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #424242;
+  font-size: 16px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.not-float {
+  clear: both;
+}
+
+.header {
+  background-color: var(--bg-head);
+  padding: 5px 10px;
+  font-size: 20px;
+  color: #ffffff;
+}
+.header div {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+h2 {
+  color: var(--bg-head);
+  letter-spacing: 1px;
+}
+.controlForm {
+  width: 300px;
+  margin-top: 30px;
+  box-shadow: 0 0 7px rgba(65, 105, 225, 0.3);
+  border-radius: 3px;
+  padding: 10px;
+}
+.controlForm__header {
+  color: var();
+}
+.controlForm div {
+  margin-top: 10px;
+}
+.controlForm > button {
+  margin-top: 20px;
+}
+input,
+select,
+option {
+  font: inherit;
+  font-size: 14px;
+}
+.controlForm__country,
+.controlForm__searh {
+  width: 100%;
+  border-bottom: 1px solid #b2c5ff;
+  padding: 5px;
+}
+
+.button {
+  padding: 5px 20px;
+  background-color: var(--bg-light);
+  cursor: pointer;
+}
+
+.controlForm__country:hover,
+.controlForm__searh:hover,
+.controlForm__country:focus,
+.controlForm__searh:focus {
+  border-bottom: 1px solid royalblue;
+}
+.button:hover,
+button:focus {
+  background-color: var(--bg-head);
+  color: #ffffff;
+  transition: all 0.3s;
+}
+
+.colectionNews {
+  width: 320px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+.colectionNews li {
+  width: 300px;
+  box-shadow: 0 0 3px rgba(65, 105, 225, 0.3);
+  padding: 10px;
+  margin: 10px;
+}

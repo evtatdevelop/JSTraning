@@ -1,0 +1,67 @@
+/* rest */
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.post {
+  border: 1px solid gray;
+  border-radius: 5px;
+  background-color: wheat;
+  color: #424242;
+  margin-top: 10px;
+  padding: 20px;
+}
+.title {
+  font-size: 24px;
+}
+.body {
+  font-size: 18px;
+}
+
+/* RESPONSIVE */
+
+/* Tablet portrait */
+@media screen and (min-width: 704px) {
+}
+
+/* Tablet landscape */
+@media screen and (min-width: 944px) {
+  .postList {
+    width: 900px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: relative;
+    left: 50%;
+    margin-left: -450px;
+  }
+  .post {
+    width: 400px;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1309px) {
+  .postList {
+    width: 1300px;
+    margin-left: -650px;
+  }
+}
