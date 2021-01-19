@@ -7,6 +7,65 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>Project #3</h1>
+    <header class="header">
+      <div class="header__wrapper">
+        <h1 class="header__logo">Air Tickets</h1>
+
+        <div class="select header__currency">
+          <label for="standard-select" class="visually-hidden">Currency</label>
+          <select id="standard-select">
+            <option value="USD">$ USD</option>
+            <option value="EUR">€ EUR</option>
+          </select>
+          <span class="focus"></span>
+        </div>
+      </div>
+    </header>
+
+    <section class="application">
+      <form name="search" class='search'>
+        <h2 class="controlForm__header">Search tickets</h2>
+        <div class="search__item">
+          <label for="body" class="visually-hidden">Origin</label>
+          <input type="text" name="origin" id="origin" list="originList" placeholder="Origin" value="" class="searh__origin">
+          <datalist id="originList">
+            <option value="Tomsk"></option>
+            <option value="Krasnoyarsk"></option>
+            <option value="Novosibirsk"></option>
+            <option value="Kemerovo"></option>
+           </datalist>
+        </div>
+        <div class="search__item">
+          <label for="body" class="visually-hidden">Distination</label>
+          <input type="text" name="distination" id="distination" list="distinationList" placeholder="Distination" value="" class="searh__distination">
+          <datalist id="distinationList">
+            <option value="Tomsk"></option>
+            <option value="Krasnoyarsk"></option>
+            <option value="Novosibirsk"></option>
+            <option value="Kemerovo"></option>
+           </datalist>
+        </div>
+        <div class="search__item search__dates">
+          <label for="departure">
+            <span class="search__label-name">Depart date</span><br>
+            <input id="departure" name="departure" type="date" min="2021-01-01" class="searh__departure">
+          </label>
+          <br>
+          <label for="retern">
+            <span class="search__label-name">Return date</span><br>
+            <input id="retern" name="retern" type="date" min="2021-01-01" class="searh__retern">
+          </label>
+        </div>
+        <div class="search__item search__controls">
+          <button type="submit" class="button btn-success search__submit">Search</button>
+        <button type="reset" class="button btn-danger search__submit">Reset</button>
+        </div>
+      </form>
+    </section>
+
+
+
+
+
   </body>
 </html>

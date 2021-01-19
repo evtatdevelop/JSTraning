@@ -46,13 +46,13 @@ async function getPostUser(data) {
 //   .then((data) => getPostUser(data))
 //   .then((fullData) => console.log(fullData));
 
-const app = document.querySelector('.app');
-const buttonGet = document.createElement('button');
-const ul = document.createElement('ul');
-ul.classList.add('postList');
-buttonGet.addEventListener('click', onButtonGetClick);
-buttonGet.textContent = 'Get posts';
-app.insertAdjacentElement('afterbegin', buttonGet);
+const app = document.querySelector(".app");
+const buttonGet = document.createElement("button");
+const ul = document.createElement("ul");
+ul.classList.add("postList");
+buttonGet.addEventListener("click", onButtonGetClick);
+buttonGet.textContent = "Get posts";
+app.insertAdjacentElement("afterbegin", buttonGet);
 app.appendChild(ul);
 
 async function onButtonGetClick() {
@@ -61,7 +61,7 @@ async function onButtonGetClick() {
       `https://jsonplaceholder.typicode.com/posts`
     ).then((result) => result.json());
 
-    response.forEach((element) => {
+    await response.forEach((element) => {
       getPost(element.id)
         .then((post) => getPostComents(post))
         .then((data) => getPostUser(data))
@@ -83,20 +83,20 @@ async function onButtonGetClick() {
  */
 function renderPost(data) {
   const { post, comments, user } = data;
-  const li = document.createElement('li');
-  const title = document.createElement('h3');
-  const body = document.createElement('p');
-  const userName = document.createElement('p');
+  const li = document.createElement("li");
+  const title = document.createElement("h3");
+  const body = document.createElement("p");
+  const userName = document.createElement("p");
 
-  li.classList.add('post');
-  title.classList.add('title');
-  body.classList.add('body');
-  userName.classList.add('uaser-name');
+  li.classList.add("post");
+  title.classList.add("title");
+  body.classList.add("body");
+  userName.classList.add("uaser-name");
 
   title.textContent = post.title;
   body.textContent = post.body;
   userName.textContent = user.name;
-  li.setAttribute('data-id', post.id);
+  li.setAttribute("data-id", post.id);
 
   li.appendChild(title);
   li.appendChild(body);
@@ -109,10 +109,10 @@ function renderPost(data) {
 }
 
 function renderComents(comments) {
-  const comentsUl = document.createElement('ul');
-  comentsUl.classList.add('coments-box')
+  const comentsUl = document.createElement("ul");
+  comentsUl.classList.add("coments-box");
   comments.forEach((comment) => {
-    const comentsLi = document.createElement('li');
+    const comentsLi = document.createElement("li");
     comentsLi.textContent = comment.name;
     comentsUl.append(comentsLi);
   });

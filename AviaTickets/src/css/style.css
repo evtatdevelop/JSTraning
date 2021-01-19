@@ -1,0 +1,207 @@
+/* Custom Select */
+/* https://webformyself.com/polzovatelskie-stili-elementov-select-na-css/ */
+:root {
+  --select-border: wheat;
+  --select-focus: blue;
+  --select-arrow: var(--select-border);
+}
+/* throw away arrow */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  /* padding: 0 1em 0 0; */
+  padding: 0.25em 0.5em;
+  margin: 0;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+  color: inherit;
+  outline: none;
+  z-index: 2;
+}
+select::-ms-expand {
+  display: none;
+}
+option {
+  color: #424242;
+}
+/* new outlet */
+.select {
+  width: 100%;
+  /* border: 1px solid var(--select-border); */
+  border-radius: 0.25em;
+  /* padding: 0.25em 0.5em; */
+  font-size: 1.25rem;
+  cursor: pointer;
+  line-height: 1.1;
+  background-color: #fff;
+  /* background-image: linear-gradient(to top, #f9f9f9, #fff 33%); */
+  background-color: transparent;
+  /* new arrow */
+  display: grid;
+  grid-template-areas: "select";
+  align-items: center;
+
+  /* focus */
+  position: relative;
+}
+/* new arrow */
+.select::after {
+  content: "";
+  width: 0.8em;
+  height: 0.5em;
+  background-color: var(--select-arrow);
+  clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+  justify-self: end;
+  margin-right: 0.5em;
+}
+select,
+.select:after {
+  grid-area: select;
+}
+select:focus + .focus {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  /* box-shadow: 0 0 5px rgba(240, 116, 39, 1); */
+  border-bottom: 1px solid wheat;
+}
+/* end custom select */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.not-float {
+  clear: both;
+}
+
+html,
+body {
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  min-height: 50px;
+  background-color: royalblue;
+  color: wheat;
+}
+
+.header__wrapper {
+  display: flex;
+  width: 300px;
+  justify-content: space-between;
+  padding: 0;
+  align-items: center;
+}
+.header__logo {
+  font-size: 24px;
+}
+.header__currency {
+  width: 80px;
+  font-size: 14px;
+}
+
+.application {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search {
+  font: inherit;
+  width: 300px;
+  border-left: 1px solid rgb(212, 212, 212);
+  border-right: 1px solid rgb(212, 212, 212);
+  border-bottom: 1px solid rgb(212, 212, 212);
+  box-shadow: 0 1px 3px rgba(42, 42, 42, 0.5);
+  padding: 16px;
+  margin-top: 5px;
+}
+input {
+  font: inherit;
+  font-size: 14px;
+}
+.searh__retern,
+.searh__departure,
+.searh__origin,
+.searh__distination {
+  width: 100%;
+  border-bottom: 1px solid #b2c5ff;
+  padding: 5px;
+  letter-spacing: 0.5px;
+}
+
+.button {
+  padding: 5px 20px;
+  background-color: var(--bg-light);
+  cursor: pointer;
+  color: wheat;
+}
+.searh__retern:focus,
+.searh__departure:focus,
+.searh__retern:hover,
+.searh__departure:hover,
+.searh__origin:focus,
+.searh__distination:focus,
+.searh__origin:hover,
+.searh__distination:hover {
+  border-bottom: 1px solid royalblue;
+  transition: all 0.3s;
+}
+
+.button {
+  padding: 5px 20px;
+  cursor: pointer;
+  font-size: inherit;
+}
+.button:hover,
+button:focus {
+  color: #ffffff;
+  box-shadow: 0 0 5px rgb(103, 109, 145);
+  transition: all 0.3s;
+}
+.btn-success {
+  background-color: #008435;
+}
+.btn-danger {
+  background-color: #8e2a12;
+}
+.search__item {
+  margin-top: 16px;
+}
+.search__controls {
+  margin-top: 32px;
+  display: flex;
+  justify-content: space-between;
+}
+.search__dates {
+  display: flex;
+  justify-content: space-between;
+}
+.search__label-name {
+  font-size: 14px;
+  color: #b4b3b3;
+}
+.controlForm__header {
+  font-size: 20px;
+  font-weight: 100;
+  color: #b4b3b3;
+  letter-spacing: 0.5px;
+}
