@@ -14,7 +14,6 @@ class Locations {
     ]);
 
     const [countries, cities] = response;
-    // this.countries = countries;
     this.countries = this.serializeCountries(countries);
     this.cities = this.serializeCities(cities);
     this.shortCitiesList = this.createShortCitiesList(this.cities);
@@ -23,9 +22,10 @@ class Locations {
 
   createShortCitiesList(cities) {
     return Object.entries(cities).reduce((acc, [key]) => {
-      acc[key] = null;
+      // console.log(key);
+      acc.push(key);
       return acc;
-    }, {});
+    }, []);
   }
 
   serializeCountries(countries) {
