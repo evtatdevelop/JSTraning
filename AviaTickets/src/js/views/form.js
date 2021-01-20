@@ -4,13 +4,26 @@ class FormUI {
     this.origin = document.getElementById("origin");
     this.distination = document.getElementById("distination");
     this.departure = document.getElementById("departure");
-    this.retern = document.getElementById("retern");
+    this.return = document.getElementById("return");
     this.originList = document.getElementById("originList");
     this.distinationList = document.getElementById("distinationList");
   }
 
   get form() {
-    return this.$form;
+    return this._form;
+  }
+
+  get originVal() {
+    return this.origin.value;
+  }
+  get distinationVal() {
+    return this.distination.value;
+  }
+  get departureVal() {
+    return this.departure.value;
+  }
+  get returnVal() {
+    return this.return.value;
   }
 
   setAutocomplitData(data) {

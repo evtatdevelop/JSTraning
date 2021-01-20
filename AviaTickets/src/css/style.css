@@ -138,14 +138,18 @@ input {
   font: inherit;
   font-size: 14px;
 }
-.searh__retern,
+.searh__return,
 .searh__departure,
 .searh__origin,
 .searh__distination {
-  width: 100%;
+  /* width: 100%; */
   border-bottom: 1px solid #b2c5ff;
   padding: 5px;
   letter-spacing: 0.5px;
+}
+.searh__origin,
+.searh__distination {
+  width: 100%;
 }
 
 .button {
@@ -154,9 +158,9 @@ input {
   cursor: pointer;
   color: wheat;
 }
-.searh__retern:focus,
+.searh__return:focus,
 .searh__departure:focus,
-.searh__retern:hover,
+.searh__return:hover,
 .searh__departure:hover,
 .searh__origin:focus,
 .searh__distination:focus,
@@ -191,13 +195,14 @@ button:focus {
   display: flex;
   justify-content: space-between;
 }
-.search__dates {
+.search__date {
   display: flex;
   justify-content: space-between;
 }
 .search__label-name {
   font-size: 14px;
-  color: #b4b3b3;
+  color: #767676;
+  padding: 5px;
 }
 .controlForm__header {
   font-size: 20px;

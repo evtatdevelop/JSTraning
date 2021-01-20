@@ -20,9 +20,12 @@ class Locations {
     return response;
   }
 
+  getCityCodeByKey(key) {
+    return this.cities[key].code;
+  }
+
   createShortCitiesList(cities) {
     return Object.entries(cities).reduce((acc, [key]) => {
-      // console.log(key);
       acc.push(key);
       return acc;
     }, []);
@@ -37,9 +40,9 @@ class Locations {
 
   serializeCities(cities) {
     return cities.reduce((acc, city) => {
-      const countyName = this.getCountryNameByCode(city.country_code);
+      const countryName = this.getCountryNameByCode(city.country_code);
       const cityName = city.name || name_translations.en;
-      const key = `${cityName}, ${countyName}`;
+      const key = `${cityName}, ${countryName}`;
       acc[key] = city;
       return acc;
     }, {});
@@ -49,8 +52,13 @@ class Locations {
     return this.countries[code].name;
   }
 
-  getCitiesByCountryCode(code) {
-    return this.cities.filter((city) => city.country_code === code);
+  // getCitiesByCountryCode(code) {
+  //   return this.cities.filter((city) => city.country_code === code);
+  // }
+
+  async fetchTickets(params) {
+    const response = await this.api.prices(params);
+    console.log(response);
   }
 }
 
