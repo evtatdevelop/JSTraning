@@ -1,3 +1,6 @@
+import fontawesome from "@fortawesome/fontawesome-free/js/fontawesome.js";
+import solid from "@fortawesome/fontawesome-free/js/solid.js";
+
 import "../css/rest.css";
 import "../css/style.css";
 import locations from "./store/locations";

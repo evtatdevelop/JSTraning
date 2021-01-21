@@ -210,3 +210,72 @@ button:focus {
   color: #b4b3b3;
   letter-spacing: 0.5px;
 }
+
+.nothing-found {
+  width: 100%;
+  padding: 7px;
+  text-align: center;
+  background-color: #dbe4fc;
+  color: #424242;
+  letter-spacing: 0.5px;
+  font-size: 12px;
+  margin-top: 30px;
+  font-weight: bold;
+}
+
+.application__results {
+  display: flex;
+  width: 300px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+.results__item {
+  width: 300px;
+  border-left: 1px solid rgb(212, 212, 212);
+  border-right: 1px solid rgb(212, 212, 212);
+  border-bottom: 1px solid rgb(212, 212, 212);
+  box-shadow: 0 1px 3px rgba(42, 42, 42, 0.5);
+  padding: 8px;
+  margin-top: 5px;
+  color: #424242;
+}
+.results__airlines {
+  font-weight: bold;
+  font-size: 12px;
+}
+.results__airlines img {
+  height: 30px;
+  width: auto;
+  margin-right: 10px;
+}
+.results__path {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dotted #dbe4fc;
+  margin-top: 10px;
+}
+.results__path p {
+  text-transform: uppercase;
+}
+.results__ditails {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+.ditails__depart_date {
+  font-size: 10px;
+  font-weight: bold;
+  color: #767676;
+}
+.ditails__price {
+  padding: 5px;
+  background-color: blueviolet;
+  color: #ffffff;
+}
+.results__overlays {
+  font-size: 10px;
+  font-weight: bold;
+  margin-top: 10px;
+}

@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
+    <script defer src="/your-path-to-fontawesome/js/fontawesome.js"></script>
   </head>
   <body>
 
     <header class="header">
       <div class="header__wrapper">
-        <h1 class="header__logo">Air Tickets</h1>
+        <h1 class="header__logo"><i class="fas fa-plane-departure" style="font-size: 20px;"></i> Air Tickets</h1>
 
         <div class="select header__currency">
           <label for="currency" class="visually-hidden">Currency</label>
@@ -55,6 +56,29 @@
         </div>
 
       </form>
+
+      <div class="nothing-found">Nothing found</div>
+
+      <div class="application__results results">
+        <articl class="results__item">
+          <div class="results__airlines">
+            <img src="" alt="S7 airlines">
+            <span>S7 airlines</span>
+          </div>
+          <div class="results__path path">
+            <p class="path__depart"><i class="fas fa-plane-departure"></i>Novosibirsk</p>
+            <p class="path__arive"><i class="fas fa-plane-arrival"></i>Hong-Kong</p>
+          </div>
+          <div class="results__ditails ditails">
+            <p class="ditails__depart_date">01 May 2021 03:50</p>
+            <p class="ditails__price">$85</p>
+          </div>
+          <div class="results__overlays">Conections 1 Flight #7564</div>
+        </articl>
+
+
+
+      </div>
     </section>
 
 
