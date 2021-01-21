@@ -25,13 +25,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   async function onFormSubmit() {
     const origin = locations.getCityCodeByKey(formUI.originVal);
-    const distination = locations.getCityCodeByKey(formUI.distinationVal);
+    const destination = locations.getCityCodeByKey(formUI.destinationVal);
     const depart_date = formUI.departureVal.slice(0, 7);
     const return_date = formUI.returnVal.slice(0, 7);
     const currency = currencyUI.currencyVal;
     await locations.fetchTickets({
       origin,
-      distination,
+      destination,
       depart_date,
       return_date,
       currency,

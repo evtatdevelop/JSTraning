@@ -2,11 +2,11 @@ class FormUI {
   constructor() {
     this._form = document.forms["locationControl"];
     this.origin = document.getElementById("origin");
-    this.distination = document.getElementById("distination");
+    this.destination = document.getElementById("destination");
     this.departure = document.getElementById("departure");
     this.return = document.getElementById("return");
     this.originList = document.getElementById("originList");
-    this.distinationList = document.getElementById("distinationList");
+    this.destinationList = document.getElementById("destinationList");
   }
 
   get form() {
@@ -16,8 +16,8 @@ class FormUI {
   get originVal() {
     return this.origin.value;
   }
-  get distinationVal() {
-    return this.distination.value;
+  get destinationVal() {
+    return this.destination.value;
   }
   get departureVal() {
     return this.departure.value;
@@ -28,7 +28,7 @@ class FormUI {
 
   setAutocomplitData(data) {
     autoComplitData(data, this.originList);
-    autoComplitData(data, this.distinationList);
+    autoComplitData(data, this.destinationList);
   }
 }
 

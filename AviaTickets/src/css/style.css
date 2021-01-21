@@ -141,14 +141,14 @@ input {
 .searh__return,
 .searh__departure,
 .searh__origin,
-.searh__distination {
+.searh__destination {
   /* width: 100%; */
   border-bottom: 1px solid #b2c5ff;
   padding: 5px;
   letter-spacing: 0.5px;
 }
 .searh__origin,
-.searh__distination {
+.searh__destination {
   width: 100%;
 }
 
@@ -163,9 +163,9 @@ input {
 .searh__return:hover,
 .searh__departure:hover,
 .searh__origin:focus,
-.searh__distination:focus,
+.searh__destination:focus,
 .searh__origin:hover,
-.searh__distination:hover {
+.searh__destination:hover {
   border-bottom: 1px solid royalblue;
   transition: all 0.3s;
 }
