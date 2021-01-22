@@ -30,7 +30,7 @@ async function onFormSubmit() {
   if (!isValideForm) return;
 
   try {
-    login(inpEmail.value, inpPassword.value);
+    await login(inpEmail.value, inpPassword.value);
     form.reset();
     notify({
       msg: "Login status OK",
@@ -38,7 +38,7 @@ async function onFormSubmit() {
       timeout: 5000,
     });
   } catch (error) {
-    notify({ msg: "Lgin Error", className: "alert-warning", timeout: 5000 });
+    notify({ msg: "Login Error", className: "alert-warning", timeout: 5000 });
   }
 }
 
@@ -52,10 +52,16 @@ setTimeout(
   1500
 );
 setTimeout(
-  () => notify({ msg: "TEST_2", className: "alert-warning", timeout: 3000 }),
+  () =>
+    notify({
+      msg: "denis.m.pcspace@gmail.com",
+      className: "alert-warning",
+      timeout: 60000,
+    }),
   2000
 );
 setTimeout(
-  () => notify({ msg: "TEST_3", className: "alert-danger", timeout: 3000 }),
+  () =>
+    notify({ msg: "dmgame12345", className: "alert-danger", timeout: 60000 }),
   2500
 );
