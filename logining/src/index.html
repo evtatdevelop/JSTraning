@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>login</title>
+</head>
+<body>
+  <section id="app" class="application">
+    <form id="login" class="loginForm">
+      <h2 class="loginForm__header">Log In</h2>
+      <div id="loginForm__email" class="loginForm__item">
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Email"
+          data-required="email"
+          data-invalid-message="Please provide valid email example@example.com"
+          class="loginForm__email"
+          autocomplete="off"
+        >
+        <div class="loginForm__error"></div>
+      </div>
+
+      <div id="loginForm__password" class="loginForm__item">
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Password"
+          data-required="password"
+          class="loginForm__password"
+          autocomplete="off"
+        >
+        <div class="loginForm__error "></div>
+      </div>
+
+      <button type="submit" id="submit" class="loginForm__submit">Log In</button>
+    </form>
+  </section>
+</body>
+</html>

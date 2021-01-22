@@ -1,0 +1,119 @@
+html,
+body {
+  background-color: #161619;
+  color: wheat;
+  font-size: 16px;
+}
+
+.application {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginForm {
+  width: 300px;
+  border: 1px solid wheat;
+  border-radius: 7px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  background-color: rgba(256, 256, 256, 0.1);
+}
+.loginForm__header {
+  font-size: 20px;
+  margin-right: auto;
+}
+.loginForm__item {
+  width: 100%;
+}
+.loginForm__email,
+.loginForm__password {
+  width: 100%;
+  background-color: transparent;
+  border-bottom: 1px solid wheat;
+  /* border-radius: 3px; */
+  margin-top: 20px;
+  padding: 5px;
+  font: inherit;
+  color: wheat;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  position: relative;
+}
+
+.loginForm__submit {
+  width: 100%;
+  font: inherit;
+  margin-top: 30px;
+}
+.loginForm__submit {
+  background-color: wheat;
+  border: 2px solid #f5ac25;
+  border-radius: 3px;
+  padding: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #424242;
+}
+
+.loginForm__email:hover,
+.loginForm__password:focus,
+.loginForm__email:focus,
+.loginForm__password:hover {
+  border-bottom: 1px solid rgb(245, 172, 37);
+  transition: all 03s;
+}
+.loginForm__submit:hover,
+.loginForm__submit:focus {
+  background-color: #f5ac25;
+  transition: all 0.3s;
+}
+
+.loginForm__error {
+  position: relative;
+  /* outline: 1px solid red; */
+  font-size: 10px;
+  min-height: 12px;
+  margin-bottom: -12px;
+  color: crimson;
+  letter-spacing: 0.1em;
+}
+
+/* Notyfy */
+.notify-container {
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  z-index: 99;
+}
+.alert-notify {
+  width: 200px;
+  padding: 16px;
+  font-size: 16px;
+  margin-top: 5px;
+  border: 1px solid rgb(4, 0, 255);
+  border-radius: 4px;
+}
+.alert-prime {
+  background-color: rgba(169, 177, 245, 0.8);
+  color: rgb(4, 0, 255);
+  border: 1px solid rgb(4, 0, 255);
+}
+.alert-success {
+  background-color: rgba(162, 247, 190, 0.8);
+  color: rgb(30, 255, 0);
+  border: 1px solid rgb(30, 255, 0);
+}
+.alert-warning {
+  background-color: rgba(247, 231, 162, 0.8);
+  color: rgb(255, 230, 0);
+  border: 1px solid rgb(255, 230, 0);
+}
+.alert-danger {
+  background-color: rgba(255, 196, 181, 0.8);
+  color: rgb(255, 2, 2);
+  border: 1px solid rgb(255, 2, 2);
+}
