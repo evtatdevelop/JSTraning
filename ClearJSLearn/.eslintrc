@@ -6,6 +6,7 @@
   },
   "extends": ["airbnb/base"],
   "rules": {
+    "no-undef": "off",
     // "no-console": "error",
     "no-console": "off",
     // "semi": "off"
