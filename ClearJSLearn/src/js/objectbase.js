@@ -225,3 +225,47 @@ console.log('Objects🍔🍔');
 // ladder.showStep();
 // ladder.up().up().up().down()
 //   .showStep();
+
+// function Calculator() {
+//   this.read = () => {
+//     this.a = +prompt('Number a ?', 0);
+//     this.b = +prompt('Number b ?', 0);
+//   };
+//   this.sum = () => this.a + this.b;
+//   this.mul = () => this.a * this.b;
+// }
+// const calculator = new Calculator();
+// console.log(calculator);
+// calculator.read();
+// console.log( `Sum=${calculator.sum()}` );
+// console.log( `Mul=${calculator.mul()}` );
+
+// function Accumulator(startingValue) {
+//   this.value = startingValue;
+//   this.read = function () {
+//     this.value += +prompt('any number?', 0);
+//   };
+// }
+// const accumulator = new Accumulator(1);
+// accumulator.read();
+// accumulator.read();
+// alert(accumulator.value);
+
+// const users = [
+//   {
+//     firstName: 'John',
+//     location: {
+//       city: 'LA',
+//     },
+//     getName() {
+//       console.log('>', this.firstName);
+//     },
+//   },
+//   {},
+// ];
+
+// users.forEach((user) => {
+//   console.log(user.firstName);
+//   console.log(user.location?.city);
+//   user.getName?.();
+// });
