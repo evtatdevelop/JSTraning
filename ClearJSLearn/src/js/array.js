@@ -170,3 +170,104 @@ console.log('Arrays 🎎🎎🎎');
 // console.log(calc.calculate('2 ** 3'));
 // console.log(calc.calculate1('2 ** 3'));
 // console.log(calc.calculate1('2 + 3'));
+
+// const vasya = { name: 'Вася', age: 25 };
+// const petya = { name: 'Петя', age: 30 };
+// const masha = { name: 'Маша', age: 28 };
+// const users = [vasya, petya, masha];
+
+// const names = users.reduce((accum, item) => {
+//   accum.push(item.name);
+//   return accum;
+// }, []);
+// // const names = users.map((item) => item.name);
+
+// console.log( names ); // Вася, Петя, Маша
+
+// const vasya = { name: 'Вася', surname: 'Пупкин', id: 1 };
+// const petya = { name: 'Петя', surname: 'Иванов', id: 2 };
+// const masha = { name: 'Маша', surname: 'Петрова', id: 3 };
+// const users = [vasya, petya, masha];
+
+// // const usersMapped = users.reduce((accum, item) => {
+// //   accum.push({
+// //     fullName: `${item.name}`,
+// //     id: item.id,
+// //   });
+// //   return accum;
+// // }, []);
+
+// const usersMapped = users.map((item) => ({
+//   fullName: `${item.name} ${item.surname} `,
+//   id: item.id,
+// }));
+
+// console.log( usersMapped[0].id ); // 1
+// console.log( usersMapped[0].fullName ); // Вася Пупкин
+
+// const vasya = { name: 'Вася', age: 25 };
+// const petya = { name: 'Петя', age: 30 };
+// const masha = { name: 'Маша', age: 28 };
+// const arr = [vasya, petya, masha];
+// function sortByAge(arr) {
+//   arr.sort((a, b) => a.age - b.age);
+// }
+// sortByAge(arr);
+// // теперь: [vasya, masha, petya]
+// console.log(arr[0].name); // Вася
+// console.log(arr[1].name); // Маша
+// console.log(arr[2].name); // Петя
+
+// const arr = [1, 2, 3];
+// // function shuffle(array) {
+// //   array.sort(() => Math.random() - 0.5);
+// // }
+// function shuffle(array) {
+//   for (let i = array.length - 1; i > 0; i--) {
+//     const j = Math.floor(Math.random() * (i + 1));
+//     [array[i], array[j]] = [array[j], array[i]];
+//   }
+// }
+
+// // подсчёт вероятности для всех возможных вариантов
+// const count = {
+//   123: 0,
+//   132: 0,
+//   213: 0,
+//   231: 0,
+//   321: 0,
+//   312: 0,
+// };
+
+// for (let i = 0; i < 1000000; i++) {
+//   const array = [1, 2, 3];
+//   shuffle(array);
+//   count[array.join('')]++;
+// }
+
+// // показать количество всех возможных вариантов
+// for (const key in count) {
+//   console.log(`${key}: ${count[key]}`);
+// }
+
+// function getAverageAge(users) {
+//   return users.reduce((acc, item) => acc += item.age, 0) / users.length;
+// }
+// const vasya = { name: 'Вася', age: 25 };
+// const petya = { name: 'Петя', age: 30 };
+// const masha = { name: 'Маша', age: 29 };
+// const arr = [vasya, petya, masha];
+// console.log( getAverageAge(arr) ); // (25 + 30 + 29) / 3 = 28
+
+function unique(arr) {
+  return arr.reduce((acc, item) => {
+    if (!acc.includes(item)) acc.push(item);
+    return acc;
+  }, []);
+}
+
+const strings = ['кришна', 'кришна', 'харе', 'харе',
+  'харе', 'харе', 'кришна', 'кришна', ':-O',
+];
+
+console.log( unique(strings) ); // кришна, харе, :-O
