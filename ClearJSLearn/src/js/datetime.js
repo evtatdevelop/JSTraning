@@ -1,3 +1,3 @@
 'use strict';
 
-console.log('Itterable methods ⏳⏳');
+console.log('Itterable methods ⏳');
