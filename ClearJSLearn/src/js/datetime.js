@@ -82,3 +82,38 @@ console.log('Date Time ⏳');
 // console.log( formatDate(new Date(new Date() - 40 * 1000)) ); // "30 сек. назад"
 // console.log( formatDate(new Date(new Date() - 7 * 60 * 1000)) ); // "5 мин. назад"
 // console.log( formatDate(new Date(new Date() - 854010 * 1000)) );
+
+/**
+ * JSON
+ */
+console.log('JSON 🎃');
+
+// const user = {
+//   name: 'Василий Иванович',
+//   age: 35,
+// };
+
+// const sers = JSON.stringify(user);
+// console.log(sers);
+// console.log(JSON.parse(sers));
+
+// const room = {
+//   number: 23,
+// };
+
+// const meetup = {
+//   title: 'Совещание',
+//   occupiedBy: [{ name: 'Иванов' }, { name: 'Петров' }],
+//   place: room,
+// };
+
+// // цикличные ссылки
+// room.occupiedBy = meetup;
+// meetup.self = meetup;
+
+// console.log(
+//   JSON.stringify(meetup, (key, value) => {
+//     console.log(value);
+//     return (key !== '' && value === meetup) ? undefined : value;
+//   }),
+// );
