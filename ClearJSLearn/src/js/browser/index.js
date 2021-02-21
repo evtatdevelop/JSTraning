@@ -49,3 +49,40 @@ console.log('browser 🎀');
 //     }
 //   }
 // }
+
+/** *
+ *
+ */
+// const lis = document.querySelectorAll('body>ul li');
+
+// for ( const li of lis ) {
+//   const ln = li.querySelectorAll('li').length;
+//   const text = li.firstChild.data.trim();
+
+//   console.log(text, ln);
+// }
+
+/**
+ *
+ */
+// const element = document.querySelector('[data-widget-name]');
+// console.log(element.dataset.widgetName);
+
+/**
+ *
+ */
+// const links = document.querySelectorAll('ul>li>a');
+// for ( const link of links) {
+//   if (
+//     link.getAttribute('href').includes('://')
+//     && !link.href.startsWith('http://internal.com')
+//   ) {
+//     link.style.color = 'orange';
+//   }
+//   console.log(link.href, link.getAttribute('href'));
+// }
+
+// const selector = 'a[href*="://"]:not([href^="http://internal.com"])';
+// const links = document.querySelectorAll(selector);
+
+// links.forEach((link) => link.style.color = 'orange');
