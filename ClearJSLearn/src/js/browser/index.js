@@ -86,3 +86,171 @@ console.log('browser 🎀');
 // const links = document.querySelectorAll(selector);
 
 // links.forEach((link) => link.style.color = 'orange');
+
+/**
+ *
+ */
+// function createList() {
+//   const liElements = [];
+//   while (true) {
+//     const insert = prompt('Add line: ');
+//     if (!insert) break;
+//     const li = document.createElement('li');
+//     li.textContent = insert;
+//     liElements.push(li);
+//   }
+//   return liElements;
+// }
+
+/**
+ *
+ */
+// const data = {
+//   Рыбы: {
+//     форель: {},
+//     лосось: {},
+//   },
+//   Деревья: {
+//     Огромные: {
+//       секвойя: {},
+//       дуб: {},
+//     },
+//     Цветковые: {
+//       яблоня: {},
+//       магнолия: {},
+//     },
+//   },
+// };
+// function createTree(data) {
+//   const arr = Object.entries(data);
+//   if (arr.length === 0) return '';
+//   const ul = document.createElement('ul');
+//   for (const item of arr) {
+//     const [key, val] = item;
+//     const li = document.createElement('li');
+//     li.textContent = key;
+//     if (typeof (val) === 'object') {
+//       li.append(createTree(val));
+//     }
+//     ul.append(li);
+//   }
+//   return ul;
+// }
+// document.body.append(createTree(data));
+
+// //
+// // *
+// //
+// const lis = document.querySelectorAll('ul li');
+// for (const li of lis) {
+//   const childNum = li.querySelectorAll('li').length;
+//   if (!childNum) continue;
+//   li.firstChild.data += `[${childNum}]`;
+// }
+
+/**
+ *
+ */
+// function createCalendar(elem, year, month) {
+//   const table = document.createElement('table');
+//   table.classList.add('table');
+
+//   const days = ['Mn', 'Tu', 'We', 'Th', 'Fr', 'St', 'Sn'];
+//   const thead = document.createElement('thead');
+//   for (let i = 0; i < 7; i++) {
+//     const th = document.createElement('th');
+//     th.textContent = days[i];
+//     thead.append(th);
+//   }
+//   table.append(thead);
+
+//   const thisMonth = new Date(year, month - 1);
+//   const nextMonth = new Date(year, month);
+//   const numDays = (nextMonth - thisMonth) / 1000 / 24 / 60 / 60;
+//   const firstDay = thisMonth.getDay();
+//   const lastDay = nextMonth.getDay() - 1;
+//   const cells = (lastDay === 0) ? firstDay - 1 + numDays : (firstDay - 1) + numDays + (7 - lastDay);
+
+//   const tBody = document.createElement('tbody');
+//   let currentDay = 2 - firstDay;
+//   for (let w = 1; w <= cells / 7; w++ ) {
+//     const tr = document.createElement('tr');
+//     for (let d = 1; d <= 7; d++) {
+//       const td = document.createElement('td');
+//       if (currentDay < 1 || currentDay > numDays) {
+//         td.textContent = '';
+//       } else {
+//         thisMonth.setDate(currentDay);
+//         td.textContent = thisMonth.getDate();
+//       }
+//       currentDay++;
+//       tr.append(td);
+//     }
+//     tBody.append(tr);
+//   }
+//   table.append(tBody);
+//   elem.append(table);
+// }
+// createCalendar(document.body, 2012, 9);
+
+/**
+ *
+ */
+// function getTime() {
+//   const time = new Date();
+//   let h = time.getHours();
+//   let m = time.getMinutes();
+//   let s = time.getSeconds();
+//   h = (h < 10) ? `0${h}` : `${h}`;
+//   m = (m < 10) ? `0${m}` : `${m}`;
+//   s = (s < 10) ? `0${s}` : `${s}`;
+//   return `<span class='h'>${h}</span>:<span class='m'>${m}</span>:<span class='s'>${s}</span>`;
+// }
+// const article = document.createElement('article');
+// let timer;
+// article.innerHTML = getTime();
+
+// const btnStart = document.createElement('button');
+// const btnStop = document.createElement('button');
+// btnStart.textContent = 'Start';
+// btnStop.textContent = 'Stop';
+
+// btnStop.addEventListener('click', () => clearInterval(timer));
+// btnStart.addEventListener('click', () => {
+//   timer = setInterval(() => {
+//     article.innerHTML = getTime();
+//   }, 1000);
+// });
+
+// document.body.append(article);
+// document.body.append(btnStart);
+// document.body.append(btnStop);
+
+/**
+ *
+ */
+// const listString = '<ul><li id="one">1</li><li id="two">4</li></ul>';
+// document.body.insertAdjacentHTML('beforeend', listString);
+// const newString = '<li>2</li><li>3</li>';
+// const two = document.querySelector('#two');
+// two.insertAdjacentHTML('beforebegin', newString);
+// // const lastLi = two.cloneNode(true);
+// // two.remove();
+// // const ul = document.querySelector('ul');
+// // ul.insertAdjacentHTML('beforeend', newString);
+// // ul.append(lastLi);
+
+/**
+ *
+ */
+// const table = document.querySelector('#table');
+// // const tres = table.querySelectorAll('tr');
+// // const thead = table.firstElementChild.firstElementChild.cloneNode(true);
+// const newOrder = Array.from(table.rows)
+// // newOrder.shift(0);
+//   .slice(1)
+//   .sort((a, b) => (a.firstElementChild.textContent > b.firstElementChild.textContent ? 1 : -1));
+// // table.innerHTML = '';
+// // table.append(thead, ...newOrder);
+// table.tBodies[0].append(...newOrder);
+// // console.log(table.tBodies[0]);
