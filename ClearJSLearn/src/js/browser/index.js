@@ -254,3 +254,76 @@ console.log('browser 🎀');
 // // table.append(thead, ...newOrder);
 // table.tBodies[0].append(...newOrder);
 // // console.log(table.tBodies[0]);
+
+/**
+ *
+ */
+// function showNotification(options) {
+//   const {
+//     top, right, html, className,
+//   } = options;
+//   const div = document.createElement('div');
+//   div.className = 'notification';
+//   div.classList.add('welcome');
+//   div.innerHTML = html;
+//   div.style.top = `${top}px`;
+//   div.style.right = `${right}px`;
+//   document.body.append(div);
+//   setTimeout(() => div.remove(), 1500);
+//   console.log(top, right, html, className);
+// }
+
+// showNotification({
+//   top: 10, // 10px от верхней границы окна (по умолчанию 0px)
+//   right: 10, // 10px от правого края окна (по умолчанию 0px)
+//   html: 'Hello!', // HTML-уведомление
+//   className: 'welcome', // дополнительный класс для div (необязательно)
+// });
+
+/**
+ *
+ */
+// function getScrollBottom(element) {
+//   return scrollBottom = element.scrollHeight
+//     - (element.scrollTop + element.clientHeight);
+// }
+
+// function getScrollWidth() {
+//   const el = document.createElement('div');
+//   el.style.overflowY = 'scroll';
+//   el.style.height = '50px';
+//   el.style.width = '50px';
+//   document.body.append(el);
+//   const scrollWidth = el.offsetWidth - el.clientWidth;
+//   el.remove();
+//   return scrollWidth;
+// }
+
+/**
+ *
+ */
+// const field = document.createElement('div');
+// field.style.cssText = `
+// width: 300px;
+// height: 250px;
+// position: relative;
+// border: 3px solid #007700;
+// background-color: #00FF00;
+// `;
+// const div = document.createElement('div');
+// div.style.cssText = `
+//   width: 50px;
+//   height: 50px;
+//   position: absolute;
+//   border-radius: 50%;
+//   border: 2px solid green;
+//   background-color: #D8B31C;
+// `;
+// field.append(div);
+// document.body.append(field);
+// div.style.left = `${field.clientWidth / 2 - (div.offsetWidth / 2)}px`;
+// div.style.top = `${field.clientHeight / 2 - (div.offsetHeight / 2)}px`;
+
+/**
+ *
+ */
