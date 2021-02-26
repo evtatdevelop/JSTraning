@@ -327,3 +327,66 @@ console.log('browser 🎀');
 /**
  *
  */
+// const element = document.querySelector('.testCoord');
+// const elRect = element.getBoundingClientRect();
+
+// console.log(elRect.left, elRect.top);
+// console.log(elRect.x, elRect.y);
+
+// console.log(elRect.right, elRect.bottom);
+// console.log(elRect.x + elRect.width, elRect.y + elRect.height);
+
+// console.log(elRect.x + element.clientLeft, elRect.y + element.clientTop);
+// console.log(elRect.x + element.clientLeft + element.clientWidth, elRect.y + element.clientTop + element.clientHeight);
+
+// console.log(elRect.right - (elRect.x + element.clientLeft + element.clientWidth));
+// console.log(elRect.bottom - (elRect.y + element.clientTop + element.clientHeight));
+
+/**
+ *
+ */
+// function getCoords(elem) {
+//   const box = elem.getBoundingClientRect();
+//   return {
+//     top: box.top + pageYOffset,
+//     left: box.left + pageXOffset,
+//   };
+// }
+
+// function positionAt(anchor, position, elem) {
+//   const positopns = {
+//     top: {
+//       x: getCoords(anchor).left,
+//       y: getCoords(anchor).top - elem.offsetHeight,
+//     },
+//     right: {
+//       x: getCoords(anchor).left + anchor.offsetWidth,
+//       y: getCoords(anchor).top,
+//     },
+//     bottom: {
+//       x: getCoords(anchor).left,
+//       y: getCoords(anchor).top + anchor.offsetHeight,
+//     },
+//   };
+//   elem.style.left = `${positopns[position].x}px`;
+//   elem.style.top = `${positopns[position].y}px`;
+// }
+
+// function showNote(anchor, position, html) {
+//   const div = document.createElement('div');
+//   div.innerHTML = html;
+//   div.classList.add('message');
+//   div.style.cssText = `
+//     position: absolute;
+//     border: 1px solid #424242;
+//     padding: 5px;
+//     display: inline-block;
+//     font-style: italic;
+//     font-family: serif;`;
+//   document.body.append(div);
+//   const message = document.querySelector('.message');
+//   positionAt(anchor, position, message);
+// }
+
+// const anchor = document.querySelector('.article');
+// showNote(anchor, 'right', 'Hello!');
