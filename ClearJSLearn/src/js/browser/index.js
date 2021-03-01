@@ -355,27 +355,39 @@ console.log('browser 🎀');
 
 // function positionAt(anchor, position, elem) {
 //   const positopns = {
-//     top: {
+//     'top-out': {
 //       x: getCoords(anchor).left,
 //       y: getCoords(anchor).top - elem.offsetHeight,
 //     },
-//     right: {
+//     'top-in': {
+//       x: getCoords(anchor).left,
+//       y: getCoords(anchor).top,
+//     },
+//     'right-out': {
 //       x: getCoords(anchor).left + anchor.offsetWidth,
 //       y: getCoords(anchor).top,
 //     },
-//     bottom: {
+//     'right-in': {
+//       x: getCoords(anchor).left + anchor.offsetWidth - elem.offsetWidth,
+//       y: getCoords(anchor).top,
+//     },
+//     'bottom-out': {
 //       x: getCoords(anchor).left,
 //       y: getCoords(anchor).top + anchor.offsetHeight,
+//     },
+//     'bottom-in': {
+//       x: getCoords(anchor).left,
+//       y: getCoords(anchor).top + anchor.offsetHeight - elem.offsetHeight,
 //     },
 //   };
 //   elem.style.left = `${positopns[position].x}px`;
 //   elem.style.top = `${positopns[position].y}px`;
+//   // console.log(positopns);
 // }
 
 // function showNote(anchor, position, html) {
 //   const div = document.createElement('div');
 //   div.innerHTML = html;
-//   div.classList.add('message');
 //   div.style.cssText = `
 //     position: absolute;
 //     border: 1px solid #424242;
@@ -384,9 +396,13 @@ console.log('browser 🎀');
 //     font-style: italic;
 //     font-family: serif;`;
 //   document.body.append(div);
-//   const message = document.querySelector('.message');
-//   positionAt(anchor, position, message);
+//   positionAt(anchor, position, div);
 // }
 
 // const anchor = document.querySelector('.article');
-// showNote(anchor, 'right', 'Hello!');
+// showNote(anchor, 'top-out', 'Hello!');
+// showNote(anchor, 'right-out', 'Hello!');
+// showNote(anchor, 'bottom-out', 'Hello!');
+// showNote(anchor, 'top-in', 'Hello!');
+// showNote(anchor, 'right-in', 'Hello!');
+// showNote(anchor, 'bottom-in', 'Hello!');
