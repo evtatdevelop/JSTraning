@@ -147,33 +147,198 @@ console.log('events 🎪');
 //     border: none;
 //     cursor: pointer;
 //   `;
-//   button.addEventListener('click', (e) => {
-//     e.target.closest('.art').remove();
-//   });
+//   // button.addEventListener('click', (e) => {
+//   //   e.target.closest('.art').remove();
+//   // });
+//   button.setAttribute('data-closer', 'close');
 //   item.append(button);
 // }
+// section.addEventListener('click', (e) => {
+//   const { closer } = e.target.dataset;
+//   if (closer) {
+//     e.target.closest('.art').remove();
+//   }
+// });
 
-const ul = document.querySelector('.carusel ul');
-const NUM_VISIBLE = 3;
-const STEP = 2;
-const num = ul.querySelectorAll('li').length;
-const itemWith = ul.querySelector('li').offsetWidth;
-const numHiddenItems = num - NUM_VISIBLE;
-let rightSideItems = numHiddenItems;
-let step = STEP;
+/**
+ * Carusel
+ */
+// const ul = document.querySelector('.carusel ul');
+// const NUM_VISIBLE = 3;
+// const STEP = 2;
+// const num = ul.querySelectorAll('li').length;
+// const itemWith = ul.querySelector('li').offsetWidth;
+// const numHiddenItems = num - NUM_VISIBLE;
+// let rightSideItems = numHiddenItems;
+// let step = STEP;
 
-document.querySelector('.btnForward').addEventListener('click', () => {
-  if (rightSideItems <= 0) return;
-  if (num - rightSideItems >= STEP) step = STEP;
-  if (rightSideItems < STEP) step = rightSideItems;
-  rightSideItems -= step;
-  ul.style.transform += `translateX(-${itemWith * step}px)`;
-});
+// document.querySelector('.btnForward').addEventListener('click', () => {
+//   if (rightSideItems <= 0) return;
+//   if (num - rightSideItems >= STEP) step = STEP;
+//   if (rightSideItems < STEP) step = rightSideItems;
+//   rightSideItems -= step;
+//   ul.style.transform += `translateX(-${itemWith * step}px)`;
+// });
 
-document.querySelector('.btnBack').addEventListener('click', () => {
-  if (rightSideItems >= numHiddenItems) return;
-  if (num - rightSideItems > STEP) step = STEP;
-  if (numHiddenItems - rightSideItems < step) step = numHiddenItems - rightSideItems;
-  rightSideItems += step;
-  ul.style.transform += `translateX(${itemWith * step}px)`;
-});
+// document.querySelector('.btnBack').addEventListener('click', () => {
+//   if (rightSideItems >= numHiddenItems) return;
+//   if (num - rightSideItems > STEP) step = STEP;
+//   if (numHiddenItems - rightSideItems < step) step = numHiddenItems - rightSideItems;
+//   rightSideItems += step;
+//   ul.style.transform += `translateX(${itemWith * step}px)`;
+// });
+
+/**
+ * CARUSEL ( CLASS )
+ */
+// class Carusel {
+//   constructor(element) {
+//     // this._element = element;
+//     element.addEventListener('click', this.onClick.bind(this));
+//     this.ul = element.querySelector('ul');
+//     this.numVisible = 3;
+//     this.initStep = 2;
+//     this.num = this.ul.querySelectorAll('li').length;
+//     this.itemWith = this.ul.querySelector('li').offsetWidth;
+//     this.numHiddenItems = this.num - this.numVisible;
+//     this.rightSideItems = this.numHiddenItems;
+//     this.step = this.initStep;
+//   }
+
+//   forward() {
+//     if (this.rightSideItems <= 0) return;
+//     this.step = (this.rightSideItems < this.initStep)
+//       ? this.step = this.rightSideItems
+//       : this.step = this.initStep;
+//     this.rightSideItems -= this.step;
+//     this.ul.style.transform += `translateX(-${this.itemWith * this.step}px)`;
+//   }
+
+//   back() {
+//     if (this.rightSideItems >= this.numHiddenItems) return;
+//     this.step = (this.numHiddenItems - this.rightSideItems < this.step)
+//       ? this.numHiddenItems - this.rightSideItems
+//       : this.step = this.initStep;
+//     this.rightSideItems += this.step;
+//     this.ul.style.transform += `translateX(${this.itemWith * this.step}px)`;
+//   }
+
+//   onClick(event) {
+//     const { action } = event.target.dataset;
+//     if (action) {
+//       this[action]();
+//     }
+//   }
+// }
+
+// new Carusel(document.querySelector('.carusel'));
+
+/**
+ * Folding Multilevel List
+ */
+// const menu = {
+//   Animals: {
+//     Mammals: {
+//       Cows: null,
+//       Donkeys: null,
+//       Dogs: null,
+//       Tigers: null,
+//     },
+//     Other: null,
+//   },
+//   Fish: {
+//     Aquarium: {
+//       Guppy: null,
+//       Scalars: null,
+//     },
+//     Sea: {
+//       'Sea trout': null,
+//     },
+//   },
+// };
+
+// function renderMenu(menu) {
+//   const ul = document.createElement('ul');
+//   const arrMenu = Object.entries(menu);
+//   for (const item of arrMenu) {
+//     const li = document.createElement('li');
+//     li.innerHTML = `<span data-action = "toggle">${item[0]}</span>`;
+//     if (item[1] && typeof (item[1]) === 'object') {
+//       li.append(renderMenu(item[1]));
+//     }
+//     ul.append(li);
+//   }
+//   return ul;
+// }
+// const mainMenu = renderMenu(menu);
+// document.body.querySelector('.app').append(mainMenu);
+
+// mainMenu.addEventListener('click', (e) => {
+//   const { target } = e;
+//   const targetUl = target.closest('li').querySelector('ul');
+//   console.log(target.dataset.action);
+//   if (target.dataset.action === 'toggle' && targetUl) targetUl.classList.toggle('hidden');
+// });
+
+/**
+ * TABLE SORTING
+ */
+// const table = document.querySelector('.sort-tab');
+// table.addEventListener('click', (e) => {
+//   const nameFn = e.target.dataset.sort;
+//   if (nameFn) {
+//     window[nameFn](e.target.cellIndex);
+//   }
+// });
+
+// function age(column) {
+//   const newOrder = Array.from(table.rows)
+//     .slice(1)
+//     .sort((a, b) => (+Array.from(a.cells)[column].textContent - +Array.from(b.cells)[column].textContent));
+
+//   table.tBodies[0].append(...newOrder);
+// }
+// function name(column) {
+//   const newOrder = Array.from(table.rows)
+//     .slice(1)
+//     .sort((a, b) => (Array.from(a.cells)[column].textContent > Array.from(b.cells)[column].textContent ? 1 : -1));
+
+//   table.tBodies[0].append(...newOrder);
+// }
+
+/**
+ * HINTS
+ */
+// function renderHint(content) {
+//   const div = document.createElement('div');
+//   div.classList.add('hint');
+//   div.innerHTML = content;
+//   return div;
+// }
+// document.addEventListener('mouseover', (e) => {
+//   const { target } = e;
+//   const dataset = target.dataset.hint;
+//   if (dataset) {
+//     const hint = renderHint(dataset);
+//     document.body.append(hint);
+
+//     const shiftX = (hint.offsetWidth - target.offsetWidth) / 2;
+//     const shiftY = 5 + hint.offsetHeight;
+
+//     const hPosition = (target.offsetLeft - (shiftX) < 5)
+//       ? 5 : target.offsetLeft - (shiftX);
+//     const vPosition = (target.offsetTop - (shiftY) > window.pageYOffset)
+//       ? target.offsetTop - (shiftY)
+//       : target.offsetTop + target.offsetHeight + 5;
+
+//     hint.style.left = `${hPosition}px`;
+//     hint.style.top = `${vPosition}px`;
+//   }
+// });
+// document.addEventListener('mouseout', (e) => {
+//   const { target } = e;
+//   const dataset = target.dataset.hint;
+//   if (dataset) {
+//     document.querySelector('.hint').remove();
+//   }
+// });

@@ -176,7 +176,7 @@ section .art p {
 /* 
   CARUSEL
 */
-.carusel {
+/* .carusel {
   width: 500px;
   display: flex;
   justify-content: space-around;
@@ -210,8 +210,45 @@ section .art p {
   cursor: pointer;
 }
 .btn:focus,
-.btm:hover {
+.btn:hover {
   outline: none;
   font-weight: 700;
   background-color: #ffc820;
+} */
+
+/* Folding Multilevel List */
+
+/* .hidden {
+  display: none;
 }
+ul > li > span[data-action="toggle"]:hover {
+  font-weight: 700;
+  cursor: pointer;
+} */
+
+/**
+ * TABLE SORTING
+ */
+/* th:hover {
+  cursor: pointer;
+  background-color: yellow;
+} */
+
+/* HINTS */
+/* .hints {
+  margin-top: 50px;
+}
+.hint {
+  position: absolute;
+  top: 150px;
+  left: 150px;
+  display: inline-block;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #c4c4c4;
+  border-radius: 4px;
+  box-shadow: 3px 3px 5px rgba(177, 176, 176, 0.7);
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 999;
+  font-style: italic;
+} */
