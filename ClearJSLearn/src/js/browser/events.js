@@ -342,3 +342,54 @@ console.log('events 🎪');
 //     document.querySelector('.hint').remove();
 //   }
 // });
+
+/**
+ *
+ */
+// const content = '<p>Lorem amet.<a href="index.html"><span>Lorem.</span></a>Lorem dolor.<a href="index.html">Lorem, ipsum.</a>Lorem sdlff fds</p>';
+// const contents = document.createElement('div');
+// contents.style.cssText = `
+//   margin: 10px;
+//   border: 1px solid #424242;
+//   padding: 10px;
+// `;
+// contents.innerHTML = content;
+// document.body.append(contents);
+
+// contents.addEventListener('click', (e) => {
+//   const anchor = e.target.closest('a');
+//   if (anchor) {
+//     if (!confirm('Do you really want to leave this page?')) {
+//       e.preventDefault();
+//     }
+//   }
+// });
+
+/**
+ * GALLARY
+ */
+// const gallery = document.createElement('section');
+// gallery.classList.add('gallary');
+// const scene = document.createElement('img');
+// scene.classList.add('scene');
+// scene.src = 'img/gallery/y9luocwa.bmp';
+// const thumb = document.createElement('div');
+// thumb.classList.add('thumb');
+// for (let i = 2; i <= 6; i++ ) {
+//   const linkImg = document.createElement('a');
+//   linkImg.href = `img/gallery/img${i}-lg.jpg`;
+//   const thumbImg = document.createElement('img');
+//   thumbImg.src = `img/gallery/thumb/img${i}-thumb.jpg`;
+//   linkImg.append(thumbImg);
+//   thumb.append(linkImg);
+// }
+// gallery.append(scene, thumb);
+// document.body.append(gallery);
+
+// gallery.addEventListener('click', (e) => {
+//   const anchor = e.target.closest('a');
+//   if (anchor) {
+//     e.preventDefault();
+//     scene.src = e.target.closest('a').href;
+//   }
+// });
