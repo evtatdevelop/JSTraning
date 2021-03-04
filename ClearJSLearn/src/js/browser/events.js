@@ -393,3 +393,56 @@ console.log('events 🎪');
 //     scene.src = e.target.closest('a').href;
 //   }
 // });
+
+/**
+ *
+ */
+// const selList = document.querySelector('.select-list');
+// selList.onmousedown = () => false;
+// selList.addEventListener('click', (e) => {
+//   const { target } = e;
+//   if (!e.metaKey && !e.ctrlKey) {
+//     target.closest('ul').querySelectorAll('li').forEach((element) => {
+//       element.classList.remove('selected');
+//     });
+//   }
+//   target.classList.add('selected');
+// });
+
+/**
+ * HINTS 2
+ */
+function renderHint(content) {
+  const div = document.createElement('div');
+  div.classList.add('hint');
+  div.innerHTML = content;
+  return div;
+}
+
+document.addEventListener('mouseover', (e) => {
+  const { target } = e;
+  const dataset = target.dataset.hint;
+  if (dataset) {
+    const hint = renderHint(dataset);
+    document.body.append(hint);
+
+    const shiftX = (hint.offsetWidth - target.offsetWidth) / 2;
+    const shiftY = 5 + hint.offsetHeight;
+
+    const hPosition = (target.offsetLeft - (shiftX) < 5)
+      ? 5 : target.offsetLeft - (shiftX);
+    const vPosition = (target.offsetTop - (shiftY) > window.pageYOffset)
+      ? target.offsetTop - (shiftY)
+      : target.offsetTop + target.offsetHeight + 5;
+
+    hint.style.left = `${hPosition}px`;
+    hint.style.top = `${vPosition}px`;
+  }
+});
+document.addEventListener('mouseout', (e) => {
+  const { target } = e;
+  const dataset = target.dataset.hint;
+  if (dataset) {
+    document.querySelector('.hint').remove();
+  }
+});

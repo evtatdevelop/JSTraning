@@ -238,8 +238,15 @@ ul > li > span[data-action="toggle"]:hover {
 } */
 
 /* HINTS */
-/* .hints {
+.hints {
   margin-top: 50px;
+  padding: 20px;
+  background-color: wheat;
+}
+.hints > p {
+  padding: 8px;
+  border: 2px solid orangered;
+  border-radius: 4px;
 }
 .hint {
   position: absolute;
@@ -254,7 +261,7 @@ ul > li > span[data-action="toggle"]:hover {
   background-color: rgba(255, 255, 255, 0.9);
   z-index: 999;
   font-style: italic;
-} */
+}
 
 /* GALLARY */
 /* .thumb a:hover,
@@ -291,4 +298,14 @@ ul > li > span[data-action="toggle"]:hover {
 .thumb > a:hover img,
 .thumb > a:focus img {
   outline: 1px solid red;
+} */
+
+/*
+select-list
+*/
+/* .select-list > li {
+  cursor: pointer;
+}
+.selected {
+  background-color: aquamarine;
 } */
