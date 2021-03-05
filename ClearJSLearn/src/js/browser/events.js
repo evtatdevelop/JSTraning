@@ -410,39 +410,120 @@ console.log('events 🎪');
 // });
 
 /**
- * HINTS 2
+ * SMART HINTS
  */
-function renderHint(content) {
-  const div = document.createElement('div');
-  div.classList.add('hint');
-  div.innerHTML = content;
-  return div;
-}
+// function renderHint(anchor) {
+//   const hint = document.createElement('div');
+//   hint.classList.add('hint');
+//   hint.innerHTML = anchor.dataset.hint;
+//   document.body.append(hint);
 
-document.addEventListener('mouseover', (e) => {
-  const { target } = e;
-  const dataset = target.dataset.hint;
-  if (dataset) {
-    const hint = renderHint(dataset);
-    document.body.append(hint);
+//   const shiftX = (hint.offsetWidth - anchor.offsetWidth) / 2;
+//   const shiftY = 5 + hint.offsetHeight;
+//   const hPosition = (anchor.offsetLeft - (shiftX) < 5)
+//     ? 5 : anchor.offsetLeft - (shiftX);
+//   const vPosition = (anchor.offsetTop - (shiftY) > window.pageYOffset)
+//     ? anchor.offsetTop - (shiftY)
+//     : anchor.offsetTop + anchor.offsetHeight + 5;
 
-    const shiftX = (hint.offsetWidth - target.offsetWidth) / 2;
-    const shiftY = 5 + hint.offsetHeight;
+//   hint.style.left = `${hPosition}px`;
+//   hint.style.top = `${vPosition}px`;
+// }
 
-    const hPosition = (target.offsetLeft - (shiftX) < 5)
-      ? 5 : target.offsetLeft - (shiftX);
-    const vPosition = (target.offsetTop - (shiftY) > window.pageYOffset)
-      ? target.offsetTop - (shiftY)
-      : target.offsetTop + target.offsetHeight + 5;
+// let startX = 0;
+// let startY = 0;
+// let counter = 0;
+// let hintedElement = null;
+// // document.addEventListener('mouseover', (e) => {
+// //   hintedElement = e.target.closest('[data-hint]');
+// //   if (!hintedElement) return;
+// // });
 
-    hint.style.left = `${hPosition}px`;
-    hint.style.top = `${vPosition}px`;
-  }
-});
-document.addEventListener('mouseout', (e) => {
-  const { target } = e;
-  const dataset = target.dataset.hint;
-  if (dataset) {
-    document.querySelector('.hint').remove();
-  }
-});
+// document.addEventListener('mouseout', (e) => {
+//   if (hintedElement) {
+//     const hint = document.querySelector('.hint');
+//     if (hint && e.target.closest('[data-hint]') !== e.relatedTarget.closest('[data-hint]')) {
+//       hint.remove();
+//     }
+//   }
+// });
+
+// document.addEventListener('mousemove', (e) => {
+//   hintedElement = e.target.closest('[data-hint]');
+//   if (hintedElement) {
+//     const moveX = Math.abs(startX - e.clientX);
+//     const moveY = Math.abs(startY - e.clientY);
+//     if ( moveX + moveY > 1 ) {
+//       startX = e.clientX;
+//       startY = e.clientY;
+//       counter = 0;
+//     }
+//     ++counter;
+
+//     if (!document.querySelector('.hint') && counter > 1 ) {
+//       renderHint(hintedElement);
+//     }
+//   }
+// });
+
+/**
+ * SMART HINTS CLASS
+ */
+// class HoverHint {
+//   constructor(element) {
+//     this.element = element;
+//     this.startX = 0;
+//     this.startY = 0;
+//     this.counter = 0;
+//     this.hintedElement = null;
+
+//     this.element.addEventListener('mouseout', (e) => this.out(e));
+//     this.element.addEventListener('mousemove', (e) => this.over(e));
+//   }
+
+//   over(e) {
+//     this.hintedElement = e.target.closest('[data-hint]');
+//     if (this.hintedElement) {
+//       const moveX = Math.abs(this.startX - e.clientX);
+//       const moveY = Math.abs(this.startY - e.clientY);
+//       if ( moveX + moveY > 1 ) {
+//         this.startX = e.clientX;
+//         this.startY = e.clientY;
+//         this.counter = 0;
+//       }
+//       ++this.counter;
+//       if (!document.querySelector('.hint') && this.counter > 1 ) {
+//         this.renderHint();
+//       }
+//     }
+//   }
+
+//   out(e) {
+//     if (this.hintedElement) {
+//       const hint = document.querySelector('.hint');
+//       if (hint && e.target.closest('[data-hint]') !== e.relatedTarget.closest('[data-hint]')) {
+//         hint.remove();
+//       }
+//     }
+//   }
+
+//   renderHint() {
+//     const hint = document.createElement('div');
+//     hint.classList.add('hint');
+//     hint.innerHTML = this.hintedElement.dataset.hint;
+//     document.body.append(hint);
+
+//     const shiftX = (hint.offsetWidth - this.hintedElement.offsetWidth) / 2;
+//     const shiftY = 5 + hint.offsetHeight;
+//     const hPosition = (this.hintedElement.offsetLeft - (shiftX) < 5)
+//       ? 5 : this.hintedElement.offsetLeft - (shiftX);
+//     const vPosition = (this.hintedElement.offsetTop - (shiftY) > window.pageYOffset)
+//       ? this.hintedElement.offsetTop - (shiftY)
+//       : this.hintedElement.offsetTop + this.hintedElement.offsetHeight + 5;
+
+//     hint.style.left = `${hPosition}px`;
+//     hint.style.top = `${vPosition}px`;
+//   }
+// }
+
+// new HoverHint(document.querySelector('.hints'));

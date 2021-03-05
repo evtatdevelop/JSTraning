@@ -238,7 +238,9 @@ ul > li > span[data-action="toggle"]:hover {
 } */
 
 /* HINTS */
-.hints {
+/* SMART HINTS */
+/* SMART HINTS CLASS*/
+/* .hints {
   margin-top: 50px;
   padding: 20px;
   background-color: wheat;
@@ -250,18 +252,19 @@ ul > li > span[data-action="toggle"]:hover {
 }
 .hint {
   position: absolute;
-  top: 150px;
-  left: 150px;
   display: inline-block;
   padding: 10px;
   text-align: center;
   border: 1px solid #c4c4c4;
   border-radius: 4px;
-  box-shadow: 3px 3px 5px rgba(177, 176, 176, 0.7);
+  box-shadow: 3px 3px 5px rgba(177, 176, 176, 0.3);
   background-color: rgba(255, 255, 255, 0.9);
   z-index: 999;
   font-style: italic;
 }
+.without-hint {
+  background-color: rgb(164, 233, 164);
+} */
 
 /* GALLARY */
 /* .thumb a:hover,
