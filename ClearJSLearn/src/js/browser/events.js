@@ -527,3 +527,88 @@ console.log('events 🎪');
 // }
 
 // new HoverHint(document.querySelector('.hints'));
+
+/**
+ * SLIDER
+ */
+// const slider = document.createElement('div');
+// const rangeLine = document.createElement('div');
+// const pointer = document.createElement('div');
+// slider.classList.add('slider');
+// rangeLine.classList.add('slider__rangeline');
+// pointer.classList.add('slider__pointer');
+// slider.append(rangeLine, pointer);
+// document.body.append(slider);
+
+// // pointer.addEventListener('mousedown', (e) => onMouseDoun(e));
+// // function onMouseDoun(e) {
+// //   const shiftX = e.clientX - pointer.offsetLeft;
+// //   const minX = rangeLine.offsetLeft;
+// //   const maxX = rangeLine.offsetLeft + rangeLine.offsetWidth - pointer.offsetWidth;
+
+// //   function moveAt(posX) {
+// //     pointer.style.left = `${posX}px`;
+// //   }
+
+// //   function movePointer(e) {
+// //     if (pointer.offsetLeft < minX) return;
+// //     if (pointer.offsetLeft > maxX) return;
+// //     let left = e.clientX - shiftX;
+// //     if (left < minX) left = minX;
+// //     if (left > maxX) left = maxX;
+// //     moveAt(left);
+// //   }
+// //   document.addEventListener('mousemove', movePointer);
+
+// //   document.addEventListener('mouseup', () => {
+// //     document.removeEventListener('mousemove', movePointer);
+// //     document.onmouseup = null;
+// //   });
+// // }
+
+// // document.ondragstart = function () {
+// //   return false;
+// // };
+
+// /**
+//  * SLIDER CLASS
+//  */
+// class Slider {
+//   constructor(element) {
+//     this.rangeLine = element.querySelector('.slider__rangeline');
+//     this.pointer = element.querySelector('.slider__pointer');
+
+//     this.minX = this.rangeLine.offsetLeft;
+//     this.maxX = this.rangeLine.offsetLeft + this.rangeLine.offsetWidth - this.pointer.offsetWidth;
+//     this.shiftX = null;
+
+//     this.pointer.addEventListener('mousedown', (e) => this.onMouseDoun(e));
+//   }
+
+//   onMouseDoun(e) {
+//     this.shiftX = e.clientX - pointer.offsetLeft;
+
+//     const bindMovePointer = this.movePointer.bind(this);
+//     document.addEventListener('mousemove', bindMovePointer);
+
+//     document.addEventListener('mouseup', () => {
+//       document.removeEventListener('mousemove', bindMovePointer);
+//       document.onmouseup = null;
+//     });
+//   }
+
+//   moveAt(posX) {
+//     this.pointer.style.left = `${posX}px`;
+//   }
+
+//   movePointer(e) {
+//     if (this.pointer.offsetLeft < this.minX) return;
+//     if (this.pointer.offsetLeft > this.maxX) return;
+//     let left = e.clientX - this.shiftX;
+//     if (left < this.minX) left = this.minX;
+//     if (left > this.maxX) left = this.maxX;
+//     this.moveAt(left);
+//   }
+// }
+
+// new Slider(slider);

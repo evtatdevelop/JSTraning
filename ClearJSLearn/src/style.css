@@ -312,3 +312,43 @@ select-list
 .selected {
   background-color: aquamarine;
 } */
+
+/* 
+SLIDER
+SLIDER CLASS
+*/
+/* .slider {
+  position: relative;
+  margin-top: 120px;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding-left: 8px;
+  padding-right: 8px;
+  width: 300px;
+}
+.slider__rangeline {
+  position: absolute;
+  width: 300px;
+  height: 12px;
+  background-color: #e0e0e0;
+  border-radius: 6px;
+}
+.slider__pointer {
+  position: absolute;
+  width: 10px;
+  height: 24px;
+  background-color: #0000ff;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: 1px solid #ffffff;
+}
+.slider:hover,
+.slider:focus {
+  outline: 1px dotted #e0e0e0;
+}
+.slider:hover .slider__rangeline,
+.slider:focus .slider__rangeline {
+  background-color: #b8b5b5;
+  background: linear-gradient(to right, #e0e0e0, #b8b5b5);
+} */
