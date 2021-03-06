@@ -612,3 +612,29 @@ console.log('events 🎪');
 // }
 
 // new Slider(slider);
+
+/**
+ *
+ */
+// function runOnKeys(func, code1, code2, ...code_n) {
+//   const keySet = new Set();
+//   const str = [...arguments].splice(1).join('');
+
+//   document.addEventListener('keydown', (e) => {
+//     keySet.add(e.code);
+//   });
+
+//   document.addEventListener('keyup', () => {
+//     const strKey = Array.from(keySet).join('');
+//     if (str === strKey) {
+//       func();
+//     }
+//     keySet.clear();
+//   });
+// }
+// runOnKeys(
+//   () => alert('Привет!'),
+//   'KeyQ',
+//   'KeyW',
+//   'KeyE',
+// );
