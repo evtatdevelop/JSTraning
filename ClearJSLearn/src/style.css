@@ -352,3 +352,40 @@ SLIDER CLASS
   background-color: #b8b5b5;
   background: linear-gradient(to right, #e0e0e0, #b8b5b5);
 } */
+
+.btn-up {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border: 1px solid rgba(165, 165, 165, 0.3);
+  border-radius: 50%;
+  background-color: rgba(221, 221, 221, 0.3);
+  box-shadow: 3px 3px 5px rgba(177, 176, 176, 0.7);
+  cursor: pointer;
+}
+.btn-up::after {
+  position: absolute;
+  content: "";
+  display: block;
+  border-top: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-bottom: 15px solid rgba(165, 165, 165, 0.3);
+  border-right: 10px solid transparent;
+  top: 15px;
+  left: 15px;
+  transition: all 0.5s;
+}
+.btn-up:hover {
+  border: 1px solid rgba(165, 165, 165, 0.7);
+  background-color: rgba(221, 221, 221, 0.7);
+}
+.btn-up:hover::after {
+  border-bottom: 15px solid rgba(165, 165, 165, 0.7);
+  top: 6px;
+}
+.btn-up:focus {
+  outline: none;
+}

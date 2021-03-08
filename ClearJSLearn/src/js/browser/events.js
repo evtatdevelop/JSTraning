@@ -638,3 +638,47 @@ console.log('events 🎪');
 //   'KeyW',
 //   'KeyE',
 // );
+
+/**
+ *  INFINITE SCROLL
+ */
+// const { body } = document;
+// function addCurrentDate() {
+//   const p = document.createElement('p');
+//   p.innerHTML = new Date();
+//   body.append(p);
+// }
+
+// function getContent(count) {
+//   for (let i = 1; i < count; i++) {
+//     addCurrentDate();
+//   }
+// }
+
+// function addContentByScroll() {
+//   const winHeight = document.documentElement.clientHeight;
+//   const scrollHeight = document.documentElement.getBoundingClientRect().bottom;
+//   if (scrollHeight - winHeight < 100) {
+//     getContent(10);
+//   }
+// }
+
+// getContent(30);
+// window.addEventListener('scroll', addContentByScroll);
+
+/**
+ *  BUTTON SCROLL-UP
+ */
+// const buttonUp = document.createElement('button');
+// buttonUp.classList.add('btn-up');
+// document.body.append(buttonUp);
+// buttonUp.addEventListener('click', () => {
+//   window.scrollTo(0, 0);
+// });
+
+// window.addEventListener('scroll', () => {
+//   const winHeight = document.documentElement.clientHeight;
+//   const { pageYOffset } = window;
+//   const btnUp = document.querySelector('.btn-up');
+//   btnUp.style.display = (winHeight < pageYOffset) ? 'block' : 'none';
+// });
