@@ -682,3 +682,46 @@ console.log('events 🎪');
 //   const btnUp = document.querySelector('.btn-up');
 //   btnUp.style.display = (winHeight < pageYOffset) ? 'block' : 'none';
 // });
+
+/**
+ * LOADING WITH SCROLLING
+ */
+// const gallery = document.createElement('div');
+// gallery.style.cssText = `
+// display: flex;
+// flex-direction: column;
+// `;
+// document.querySelector('.app').append(gallery);
+// for (let i = 2; i <= 6; i++) {
+//   const img = document.createElement('img');
+//   img.src = 'img/svg/placeholder.svg';
+//   img.setAttribute('data-src', `img/gallery/img${i}-lg.jpg`);
+//   img.setAttribute('width', '550');
+//   img.setAttribute('height', '400');
+//   gallery.append(img);
+// }
+// const addImg = document.createElement('img');
+// addImg.src = 'img/gallery/y9luocwa.bmp';
+// addImg.setAttribute('width', '550');
+// addImg.setAttribute('height', '400');
+// gallery.append(addImg);
+
+// const winHeight = document.documentElement.clientHeight;
+// const images = gallery.querySelectorAll('img[data-src]');
+// function showImg() {
+//   images.forEach((image) => {
+//     if (
+//       // image.getBoundingClientRect().top < winHeight
+//       image.getBoundingClientRect().top - winHeight < winHeight
+//       && !image.classList.contains('loaded')
+//     ) {
+//       setTimeout(() => {
+//         image.setAttribute('src', image.dataset.src);
+//         image.classList.add('loaded');
+//       }, 1000);
+//     }
+//   });
+// }
+
+// showImg();
+// window.addEventListener('scroll', showImg);
