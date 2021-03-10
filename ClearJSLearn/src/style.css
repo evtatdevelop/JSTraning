@@ -353,7 +353,10 @@ SLIDER CLASS
   background: linear-gradient(to right, #e0e0e0, #b8b5b5);
 } */
 
-.btn-up {
+/*
+BUTTON-UP
+*/
+/* .btn-up {
   display: none;
   position: fixed;
   bottom: 20px;
@@ -388,4 +391,152 @@ SLIDER CLASS
 }
 .btn-up:focus {
   outline: none;
+} */
+
+/*
+EDITABLE DIV (TEXTAREA)
+*/
+/* .text-edit,
+.div-content {
+  width: 350px;
+  height: 200px;
+  padding: 5px;
 }
+.div-content {
+  border: 1px solid black;
+}
+.hide {
+  display: none;
+}
+.text-edit:focus {
+  outline: none;
+} */
+
+/*
+EDIT TABLE
+*/
+/* .edit-table tr {
+  padding: 0;
+  margin: 0;
+}
+.edit-table td {
+  width: 200px;
+  height: 75px;
+  padding: 0;
+  margin: 0;
+  line-height: 20px;
+  font-size: 14px;
+  border: 2px solid #ffffff;
+}
+.gray {
+  background-color: #999999;
+}
+.blue {
+  background-color: #0033ff;
+  color: #ffffff;
+}
+.bright-yellow {
+  background-color: #ffff66;
+}
+.yellow {
+  background-color: #ffff00;
+}
+.purple {
+  background-color: #6600cc;
+  color: #ffffff;
+}
+.sky {
+  background-color: #0099ff;
+  color: #ffffff;
+}
+.brown {
+  background-color: #996633;
+  color: #ffffff;
+}
+.orange {
+  background-color: #ff6600;
+  color: #ffffff;
+}
+.green {
+  background-color: #00cc33;
+  color: #ffffff;
+}
+.editor {
+  height: 100%;
+  width: 200px;
+  overflow-y: auto;
+  border: 0px;
+  margin: 0;
+  padding: 0;
+  margin-top: 4px;
+  resize: none;
+}
+.editor:focus {
+  outline: none;
+} */
+
+/* KEY-DOWN MOVING */
+/* #mouse {
+  display: inline-block;
+  cursor: pointer;
+}
+#mouse:focus {
+  outline: 1px dotted red;
+} */
+
+/* DEPOSIT CALC */
+/* #depform {
+  width: 300px;
+}
+#depform *:focus {
+  outline: none;
+}
+#depform p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#depform label {
+  font-weight: 700;
+}
+#depform input,
+#depform select {
+  width: 200px;
+  padding: 5px;
+}
+#depform select {
+  width: 214px;
+}
+
+.show {
+  display: flex;
+}
+.show > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px;
+  justify-content: space-between;
+}
+.show .info > p {
+  margin: 0;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.show > div .info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.show > div .gista {
+  width: 40px;
+  height: 100px;
+}
+.show .before .gista {
+  background-color: red;
+}
+.show .after .gista {
+  background-color: green;
+} */
