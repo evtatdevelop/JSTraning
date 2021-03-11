@@ -540,3 +540,39 @@ EDIT TABLE
 .show .after .gista {
   background-color: green;
 } */
+
+/* 
+  MODAL FORM
+*/
+/* #importantForm {
+  width: 300px;
+  position: fixed;
+  border: 1px solid rgb(114, 114, 114);
+  border-radius: 6px;
+  padding: 15px;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  z-index: 999;
+  background-color: #ffffff;
+}
+#importantForm > div {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 16px;
+}
+#importantForm input {
+  width: 275px;
+}
+#importantForm button {
+  width: 100px;
+}
+#foggedSheet {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(95, 158, 160, 0.1);
+  z-index: 1;
+} */

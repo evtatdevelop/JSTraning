@@ -153,3 +153,99 @@ console.log('forms 🀄');
 // interest.oninput = renderShow;
 // term.onchange = renderShow;
 // renderShow();
+
+/**
+ * MODAL FORM
+ */
+// const button = document.createElement('button');
+// button.textContent = 'Important Button';
+// document.body.querySelector('.app').append(button);
+
+// function renderForm(html) {
+//   const foggedSheet = document.createElement('div');
+//   foggedSheet.setAttribute('id', 'foggedSheet');
+//   document.body.style.overflowY = 'hidden';
+
+//   const form = document.createElement('form');
+//   form.setAttribute('id', 'importantForm');
+//   const input = document.createElement('input');
+//   const submit = document.createElement('button');
+//   const cancel = document.createElement('button');
+//   submit.textContent = 'Ok';
+//   cancel.textContent = 'Cancel';
+//   const btnBox = document.createElement('div');
+//   input.setAttribute('name', 'input');
+//   submit.setAttribute('name', 'submit');
+//   cancel.setAttribute('name', 'cancel');
+//   btnBox.append(submit, cancel);
+
+//   form.innerHTML = html;
+//   form.append(input, btnBox);
+//   document.body.append(foggedSheet, form);
+//   form.style.marginLeft = `${-(form.offsetWidth / 2)}px`;
+//   form.style.marginTop = `${-(form.offsetHeight / 2)}px`;
+//   input.focus();
+//   return form;
+// }
+
+// function showModalForm(html, callBack) {
+//   let form = document.querySelector('#importantForm');
+//   if (!form) {
+//     form = renderForm(html);
+//   }
+
+//   form.hidden = false;
+//   document.querySelector('#foggedSheet').hidden = false;
+//   form.querySelector('input').focus();
+//   document.body.style.overflowY = '';
+
+//   const { input, submit, cancel } = form.elements;
+//   let value = null;
+
+//   function oprateForm() {
+//     form.hidden = true;
+//     foggedSheet.hidden = true;
+//     callBack(value);
+//     form.reset();
+//   }
+
+//   form.onsubmit = () => {
+//     if (value === '') return false;
+//     oprateForm();
+//     return false;
+//   };
+
+//   submit.onclick = () => {
+//     value = input.value;
+//   };
+
+//   cancel.onclick = () => {
+//     value = null;
+//   };
+//   document.onkeydown = (e) => {
+//     if (e.code === 'Escape') {
+//       value = null;
+//       oprateForm();
+//     }
+//   };
+
+//   cancel.onkeydown = (e) => {
+//     if (e.key === 'Tab' && !e.shiftKey) {
+//       input.focus();
+//       return false;
+//     }
+//   };
+
+//   input.onkeydown = (e) => {
+//     if (e.key === 'Tab' && e.shiftKey) {
+//       cancel.focus();
+//       return false;
+//     }
+//   };
+// }
+
+// button.addEventListener('click', () => showModalForm('<p>Your message</p>', (val) => console.log(val)));
+
+/**
+ *
+ */
