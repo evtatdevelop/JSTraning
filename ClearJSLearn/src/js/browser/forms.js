@@ -222,6 +222,7 @@ console.log('forms 🀄');
 //   cancel.onclick = () => {
 //     value = null;
 //   };
+
 //   document.onkeydown = (e) => {
 //     if (e.code === 'Escape') {
 //       value = null;
@@ -245,6 +246,62 @@ console.log('forms 🀄');
 // }
 
 // button.addEventListener('click', () => showModalForm('<p>Your message</p>', (val) => console.log(val)));
+
+/**
+ *  PRELODING IMAGES
+ */
+// function preloadImages(sources, callback) {
+//   const promises = [];
+//   sources.forEach((path) => {
+//     const p = new Promise((resolve, reject) => {
+//       const img = document.createElement('img');
+//       img.src = path;
+//       img.onload = () => resolve();
+//       img.onerror = () => resolve();
+//     });
+//     promises.push(p);
+//   });
+//   Promise.all(promises).then(callback);
+// }
+
+// async function preloadImagesAsync(sources, callback) {
+//   await sources.forEach((path) => {
+//     const img = document.createElement('img');
+//     img.src = path;
+//   });
+//   callback();
+// }
+
+// const sources = [
+//   'https://en.js.cx/images-load/1.jpg',
+//   'https://en.js.cx/images-load/2.jpg',
+//   'https://en.js.cx/images-load/3.jpg',
+// ];
+
+// preloadImagesAsync(sources, () => {
+//   console.log('All images are loaded');
+//   const gallery = document.createElement('article');
+//   const p = document.createElement('p');
+//   p.textContent = 'Async gallary';
+//   gallery.append(p);
+//   document.body.append(gallery);
+//   sources.forEach((path) => {
+//     const img = document.createElement('img');
+//     img.src = path;
+//     gallery.append(img);
+//   });
+// });
+
+// const gallery = document.createElement('article');
+// const p = document.createElement('p');
+// p.textContent = 'Online gallary';
+// gallery.append(p);
+// document.body.append(gallery);
+// sources.forEach((path) => {
+//   const img = document.createElement('img');
+//   img.src = `${path}?${Math.random()}`;
+//   gallery.append(img);
+// });
 
 /**
  *
