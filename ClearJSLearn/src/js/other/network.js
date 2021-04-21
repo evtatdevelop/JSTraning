@@ -50,8 +50,8 @@ console.log('Network requests 🎇');
 //   const promises = names.map(async (login) => {
 //     try {
 //       const response = await fetch(`https://api.github.com/users/${login}`);
-//       return (response.ok) ? response.json() : null;
-//     } catch (e) {
+//       return (response.ok) ? await response.json() : null;
+//     } catch (err) {
 //       return null;
 //     }
 //   });
