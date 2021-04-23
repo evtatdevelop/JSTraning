@@ -2,6 +2,9 @@
 
 console.log('Sorages 🎞');
 
+/**
+ * Local Sorage
+ */
 const textArea = document.createElement('textarea');
 const userMsg = localStorage.getItem('userMsg');
 if (userMsg) {
