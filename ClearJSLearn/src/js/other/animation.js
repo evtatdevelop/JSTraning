@@ -58,7 +58,8 @@ animationBox.append(ball);
 ball.src = 'img/svg/ball.svg';
 ball.style.position = 'absolute';
 ball.style.left = '0px';
-ball.style.transition = 'left 3s';
+// ball.style.transition = 'left 3s';
+ball.style.transition = 'transform 2s';
 document.body.append(animationBox);
 
 function animate(options) {
@@ -90,15 +91,30 @@ function bounce(timeFraction) {
   }
 }
 
+function quad(timeFraction) {
+  return Math.pow(timeFraction, 2)
+}
+
 let bounceEaseOut = makeEaseOut(bounce);
 
 ball.onclick = function() {
   animate({
-    duration: 3000,
+    duration: 2000,
     timing: bounceEaseOut,
     draw: function(progress) {
       ball.style.top = progress * 400 + 'px';
     }
   });
-  ball.style.left = `300px`;
+
+  // ball.style.left = `300px`;
+  const width = 100;
+  animate({
+    duration: 2000,
+    timing: makeEaseOut(quad),
+    draw: function(progress) {
+      ball.style.left = width * progress + "px"
+    }
+  });
+
+  ball.style.transform = 'rotate(90deg)';
 };
