@@ -57,6 +57,8 @@ const ball = document.createElement('img');
 animationBox.append(ball);
 ball.src = 'img/svg/ball.svg';
 ball.style.position = 'absolute';
+ball.style.left = '0px';
+ball.style.transition = 'left 3s';
 document.body.append(animationBox);
 
 function animate(options) {
@@ -98,4 +100,5 @@ ball.onclick = function() {
       ball.style.top = progress * 400 + 'px';
     }
   });
+  ball.style.left = `300px`;
 };
