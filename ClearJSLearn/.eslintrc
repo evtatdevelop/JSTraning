@@ -23,6 +23,8 @@
     "max-classes-per-file": "off",
     "no-restricted-syntax": "off",
     // "max-len": "off",
-    "consistent-return": "off"
+    "consistent-return": "off",
+    "no-useless-constructor": "off",
+    "class-methods-use-this": "off"
   }
 }
