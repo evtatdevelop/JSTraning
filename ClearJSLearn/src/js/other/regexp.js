@@ -14,3 +14,5 @@ console.log( 'Привет!... Как дела?.....'.match(regexp) ); // ..., .
 regexp = /#[\da-f]{6}\b/gi;
 str = 'color:#121212; background-color:#AA00ef bad-colors:f#fddee #fd2 #12345678';
 console.log( str.match(regexp) ); // #121212,#AA00ef
+
+// to be continue
